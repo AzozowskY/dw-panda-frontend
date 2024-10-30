@@ -1,4 +1,4 @@
-def imageName="192.168.44.44:8082/docker/frontend"
+def imageName="docker/frontend"
 def dockerTag=""
 def dockerRegistry="https://192.168.44.44:8082"
 def registryCredentials="artifactory"
@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Get Code') {
             steps {
-                #git branch: 'jenkinsfile', url: 'https://github.com/AzozowskY/dw-panda-frontend'
+                #git branch: 'main', url: 'https://github.com/AzozowskY/dw-panda-frontend'
                 checkout scm
 	    }
         }
